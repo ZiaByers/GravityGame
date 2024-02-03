@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfv2l8m2kjlrj"]
+
+[ext_resource type="Script" path="res://Ramp.gd" id="1_e30j4"]
+[ext_resource type="Texture2D" uid="uid://22cyedykq1vp" path="res://arc.png" id="2_txcy1"]
+
+[sub_resource type="Curve2D" id="Curve2D_v6cok"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -90, -70, 0, 0, 0, 0, -70, -69, 0, 0, 0, 0, -57, -67, 0, 0, 0, 0, -46, -64, 0, 0, 0, 0, -34, -59, 0, 0, 0, 0, -19, -53, 0, 0, 0, 0, -7, -46, 0, 0, 0, 0, 6, -39, 0, 0, 0, 0, 18, -28, 0, 0, 0, 0, 29, -16, 0, 0, 0, 0, 39, -5, 0, 0, 0, 0, 46, 5, 0, 0, 0, 0, 53, 19, 0, 0, 0, 0, 57, 26, 0, 0, 0, 0, 62, 39, 0, 0, 0, 0, 65, 52, 0, 0, 0, 0, 68, 65, 0, 0, 0, 0, 70, 82, 0, 0, 0, 0, 70, 90, 0, 0, 0, 0, 89, 90, 0, 0, 0, 0, 90, 75, 0, 0, 0, 0, 87, 54, 0, 0, 0, 0, 83, 39, 0, 0, 0, 0, 78, 24, 0, 0, 0, 0, 71, 8, 0, 0, 0, 0, 61, -8, 0, 0, 0, 0, 54, -18, 0, 0, 0, 0, 46, -28, 0, 0, 0, 0, 38, -36, 0, 0, 0, 0, 31, -43, 0, 0, 0, 0, 23, -51, 0, 0, 0, 0, 13, -58, 0, 0, 0, 0, 2, -65, 0, 0, 0, 0, -9, -71, 0, 0, 0, 0, -19, -75, 0, 0, 0, 0, -29, -79, 0, 0, 0, 0, -43, -84, 0, 0, 0, 0, -54, -87, 0, 0, 0, 0, -65, -89, 0, 0, 0, 0, -76, -89, 0, 0, 0, 0, -84, -90, 0, 0, 0, 0, -90, -90, 0, 0, 0, 0, -90, -70)
+}
+point_count = 43
+
+[node name="Ramp" type="StaticBody2D"]
+script = ExtResource("1_e30j4")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+build_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_txcy1")
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_v6cok")

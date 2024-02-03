@@ -1,24 +1,24 @@
 [gd_scene load_steps=5 format=3 uid="uid://dn56l4ua8orty"]
 
-[ext_resource type="Texture2D" uid="uid://bey8qj8ip0w2k" path="res://square.png" id="1_f0nni"]
+[ext_resource type="Script" path="res://scenes/player/player.gd" id="1_63fyf"]
+[ext_resource type="Texture2D" uid="uid://b7dwflx2erwjf" path="res://cirsquare.png" id="2_jic1r"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0lw4d"]
-friction = 0.0
+bounce = 0.18
 
-[sub_resource type="GDScript" id="GDScript_l4tmo"]
-script/source = "extends RigidBody2D
-"
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7wr2s"]
-size = Vector2(92, 92)
+[sub_resource type="CircleShape2D" id="CircleShape2D_m30dq"]
+radius = 68.0661
 
 [node name="Player" type="RigidBody2D"]
 physics_material_override = SubResource("PhysicsMaterial_0lw4d")
-script = SubResource("GDScript_l4tmo")
+script = ExtResource("1_63fyf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.15, 0.15)
-texture = ExtResource("1_f0nni")
+texture = ExtResource("2_jic1r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_7wr2s")
+shape = SubResource("CircleShape2D_m30dq")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)

@@ -1,11 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://nowr724u1xj2"]
+[gd_scene load_steps=4 format=3 uid="uid://nowr724u1xj2"]
 
 [ext_resource type="Texture2D" uid="uid://cjxlh8kgh7eec" path="res://line.png" id="1_e3vac"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_144rx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kvael"]
 size = Vector2(1461, 64)
 
 [node name="Platform" type="StaticBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_144rx")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(6, 6)

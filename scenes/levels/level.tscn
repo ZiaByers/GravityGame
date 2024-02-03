@@ -1,18 +1,52 @@
-[gd_scene load_steps=5 format=3 uid="uid://dynydsdk6i2lj"]
+[gd_scene load_steps=6 format=3 uid="uid://dynydsdk6i2lj"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_j53r1"]
 [ext_resource type="PackedScene" uid="uid://dn56l4ua8orty" path="res://scenes/player/player.tscn" id="1_wnrqu"]
 [ext_resource type="PackedScene" uid="uid://nowr724u1xj2" path="res://scenes/platforms/platform.tscn" id="2_ije4x"]
 [ext_resource type="PackedScene" uid="uid://brjt5w0kmp2p4" path="res://scenes/gravity_field.tscn" id="3_60wil"]
+[ext_resource type="PackedScene" uid="uid://bfv2l8m2kjlrj" path="res://scenes/platforms/ramp.tscn" id="5_qecrm"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_j53r1")
 
 [node name="Player" parent="." instance=ExtResource("1_wnrqu")]
 position = Vector2(554, 302)
-script = null
 
 [node name="Platform" parent="." instance=ExtResource("2_ije4x")]
 position = Vector2(542, 612)
 
 [node name="Gravity Field" parent="." instance=ExtResource("3_60wil")]
+visible = false
+
+[node name="Platform2" parent="." instance=ExtResource("2_ije4x")]
+position = Vector2(540, -784)
+
+[node name="Platform3" parent="." instance=ExtResource("2_ije4x")]
+position = Vector2(-221, -86)
+rotation = 1.5708
+
+[node name="Platform4" parent="." instance=ExtResource("2_ije4x")]
+position = Vector2(1305, -87)
+rotation = 1.5708
+
+[node name="Ramp" parent="." instance=ExtResource("5_qecrm")]
+position = Vector2(1201, 475)
+rotation = 1.43589
+scale = Vector2(1.3, 1.3)
+
+[node name="Ramp2" parent="." instance=ExtResource("5_qecrm")]
+position = Vector2(-100, -662)
+rotation = -1.57877
+scale = Vector2(1.3, 1.3)
+
+[node name="Ramp3" parent="." instance=ExtResource("5_qecrm")]
+position = Vector2(1180, -665)
+rotation = -0.00467968
+scale = Vector2(1.3, 1.3)
+
+[node name="Ramp4" parent="." instance=ExtResource("5_qecrm")]
+position = Vector2(-106, 479)
+rotation = 3.20299
+scale = Vector2(1.3, 1.3)
+
+[connection signal="grav_change" from="Gravity Field" to="." method="_on_gravity_field_grav_change"]
