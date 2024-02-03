@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://dynydsdk6i2lj"]
+
+[ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_j53r1"]
+[ext_resource type="PackedScene" uid="uid://dn56l4ua8orty" path="res://scenes/player/player.tscn" id="1_wnrqu"]
+[ext_resource type="PackedScene" uid="uid://nowr724u1xj2" path="res://scenes/platforms/platform.tscn" id="2_ije4x"]
+[ext_resource type="PackedScene" uid="uid://brjt5w0kmp2p4" path="res://scenes/gravity_field.tscn" id="3_60wil"]
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_j53r1")
+
+[node name="Player" parent="." instance=ExtResource("1_wnrqu")]
+position = Vector2(554, 302)
+script = null
+
+[node name="Platform" parent="." instance=ExtResource("2_ije4x")]
+position = Vector2(542, 612)
+
+[node name="Gravity Field" parent="." instance=ExtResource("3_60wil")]
