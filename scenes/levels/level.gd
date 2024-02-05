@@ -17,13 +17,13 @@ func _on_gravity_field_grav_change(input):
 	# if there are remaining switches, switch gravity direction and decrement the switch counter
 	if (grav_switches > 0):
 		match input:
-			"ui_left": 
+			"left": 
 				direction = Vector2(-1, 0)
-			"ui_right": 
+			"right": 
 				direction = Vector2(1, 0)
-			"ui_up": 
+			"up": 
 				direction = Vector2(0, -1)
-			"ui_down": 
+			"down": 
 				direction = Vector2(0, 1)
 		grav_switches -= 1
 		$GravSwitchCounter.text = switch_label % grav_switches
