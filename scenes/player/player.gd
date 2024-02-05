@@ -1,6 +1,5 @@
 extends RigidBody2D
 
-
-# Called when the node enters the scene tree for the first time.
+# keep the player RigidBody from enetering sleep mode
 func _process(_delta):
 	sleeping = false
