@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7dwflx2erwjf"
-path="res://.godot/imported/cirsquare.png-7cdcc7921ae03bcd352ea5eaa44e0770.ctex"
+uid="uid://bkwuwtuqs3rme"
+path="res://.godot/imported/checker.png-faed951c06023e33211237e615a228bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cirsquare.png"
-dest_files=["res://.godot/imported/cirsquare.png-7cdcc7921ae03bcd352ea5eaa44e0770.ctex"]
+source_file="res://graphics/checker.png"
+dest_files=["res://.godot/imported/checker.png-faed951c06023e33211237e615a228bb.ctex"]
 
 [params]
 

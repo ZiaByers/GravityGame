@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dn56l4ua8orty"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_63fyf"]
-[ext_resource type="Texture2D" uid="uid://b7dwflx2erwjf" path="res://cirsquare.png" id="2_jic1r"]
+[ext_resource type="Texture2D" uid="uid://b7dwflx2erwjf" path="res://graphics/cirsquare.png" id="2_yd4nj"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0lw4d"]
 bounce = 0.18
@@ -15,7 +15,7 @@ script = ExtResource("1_63fyf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.15, 0.15)
-texture = ExtResource("2_jic1r")
+texture = ExtResource("2_yd4nj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_m30dq")

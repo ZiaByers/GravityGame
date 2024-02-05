@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bfv2l8m2kjlrj"]
 
-[ext_resource type="Script" path="res://Ramp.gd" id="1_e30j4"]
-[ext_resource type="Texture2D" uid="uid://22cyedykq1vp" path="res://arc.png" id="2_txcy1"]
+[ext_resource type="Script" path="res://scenes/platforms/Ramp.gd" id="1_ifgwj"]
+[ext_resource type="Texture2D" uid="uid://22cyedykq1vp" path="res://graphics/arc.png" id="2_4w6j3"]
 
 [sub_resource type="Curve2D" id="Curve2D_v6cok"]
 _data = {
@@ -10,13 +10,13 @@ _data = {
 point_count = 43
 
 [node name="Ramp" type="StaticBody2D"]
-script = ExtResource("1_e30j4")
+script = ExtResource("1_ifgwj")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 build_mode = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_txcy1")
+texture = ExtResource("2_4w6j3")
 
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_v6cok")

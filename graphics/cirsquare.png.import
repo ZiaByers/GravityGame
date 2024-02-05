@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://22cyedykq1vp"
-path="res://.godot/imported/arc.png-8153f94d957d02946fb3abe531bbe6f5.ctex"
+uid="uid://b7dwflx2erwjf"
+path="res://.godot/imported/cirsquare.png-01c375463593be6e9f76b3eda698f716.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://arc.png"
-dest_files=["res://.godot/imported/arc.png-8153f94d957d02946fb3abe531bbe6f5.ctex"]
+source_file="res://graphics/cirsquare.png"
+dest_files=["res://.godot/imported/cirsquare.png-01c375463593be6e9f76b3eda698f716.ctex"]
 
 [params]
 
