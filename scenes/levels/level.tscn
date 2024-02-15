@@ -27,7 +27,7 @@ label_settings = SubResource("LabelSettings_ofi2e")
 position = Vector2(725, 308)
 
 [node name="PlatformTiles" parent="." instance=ExtResource("5_daqcc")]
-layer_0/tile_data = PackedInt32Array(1507369, 262144, 5, 1507370, 262144, 5, 1507371, 262144, 5, 1507372, 262144, 5, 1507373, 262144, 5, 1507374, 327680, 5, 1441839, 262144, 8, 1507375, 262144, 9)
+layer_0/tile_data = PackedInt32Array(196614, 196610, 1, 196615, 131074, 2, 262152, 131074, 3, 262151, 65538, 0)
 
 [connection signal="grav_change" from="Gravity Field" to="." method="_on_gravity_field_grav_change"]
 [connection signal="you_win" from="Goal" to="." method="_on_goal_you_win"]
