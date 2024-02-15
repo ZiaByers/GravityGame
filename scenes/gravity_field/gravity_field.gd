@@ -10,7 +10,6 @@ func grav_input():
 		
 
 func _ready():
-	gravity = 1860
 	gravity_space_override = SPACE_OVERRIDE_REPLACE
 	
 

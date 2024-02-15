@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_j53r1"]
 [ext_resource type="PackedScene" uid="uid://dn56l4ua8orty" path="res://scenes/player/player.tscn" id="1_wnrqu"]
-[ext_resource type="PackedScene" uid="uid://nowr724u1xj2" path="res://scenes/platforms/platform.tscn" id="2_ije4x"]
 [ext_resource type="PackedScene" uid="uid://brjt5w0kmp2p4" path="res://scenes/gravity_field.tscn" id="3_60wil"]
 [ext_resource type="PackedScene" uid="uid://d20suj5y8a105" path="res://scenes/goal/goal.tscn" id="5_7pxc4"]
+[ext_resource type="PackedScene" uid="uid://dhw1y41762dsb" path="res://scenes/platforms/platform_tiles.tscn" id="5_daqcc"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ofi2e"]
 font_size = 48
@@ -15,44 +15,8 @@ script = ExtResource("1_j53r1")
 [node name="Gravity Field" parent="." instance=ExtResource("3_60wil")]
 visible = false
 
-[node name="Platform" parent="." instance=ExtResource("2_ije4x")]
-position = Vector2(805, 472)
-
-[node name="Platform3" parent="." instance=ExtResource("2_ije4x")]
-position = Vector2(1498, -234)
-rotation = 1.5708
-
-[node name="Platform4" parent="." instance=ExtResource("2_ije4x")]
-position = Vector2(2215, 472)
-
 [node name="Goal" parent="." instance=ExtResource("5_7pxc4")]
 position = Vector2(2255, 317)
-
-[node name="Platform2" parent="." instance=ExtResource("2_ije4x")]
-position = Vector2(804, -1465)
-
-[node name="Platform5" parent="." instance=ExtResource("2_ije4x")]
-position = Vector2(2184, -1466)
-
-[node name="Platform6" parent="." instance=ExtResource("2_ije4x")]
-position = Vector2(101, -230)
-rotation = 1.5708
-
-[node name="Platform7" parent="." instance=ExtResource("2_ije4x")]
-position = Vector2(96, -770)
-rotation = 1.5708
-
-[node name="Platform8" parent="." instance=ExtResource("2_ije4x")]
-position = Vector2(2919, -254)
-rotation = 1.5708
-
-[node name="Platform9" parent="." instance=ExtResource("2_ije4x")]
-position = Vector2(2919, -766)
-rotation = 1.5708
-
-[node name="Platform10" parent="." instance=ExtResource("2_ije4x")]
-position = Vector2(1732, 1264)
-rotation = -3.14159
 
 [node name="GravSwitchCounter" type="Label" parent="."]
 offset_right = 62.0
@@ -61,6 +25,9 @@ label_settings = SubResource("LabelSettings_ofi2e")
 
 [node name="Player" parent="." instance=ExtResource("1_wnrqu")]
 position = Vector2(725, 308)
+
+[node name="PlatformTiles" parent="." instance=ExtResource("5_daqcc")]
+layer_0/tile_data = PackedInt32Array(1507369, 262144, 5, 1507370, 262144, 5, 1507371, 262144, 5, 1507372, 262144, 5, 1507373, 262144, 5, 1507374, 327680, 5, 1441839, 262144, 8, 1507375, 262144, 9)
 
 [connection signal="grav_change" from="Gravity Field" to="." method="_on_gravity_field_grav_change"]
 [connection signal="you_win" from="Goal" to="." method="_on_goal_you_win"]
