@@ -7,18 +7,17 @@
 bounce = 0.18
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m30dq"]
-radius = 68.0661
+radius = 23.0
 
 [node name="Player" type="RigidBody2D"]
 physics_material_override = SubResource("PhysicsMaterial_0lw4d")
 script = ExtResource("1_63fyf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.03, 0.03)
+scale = Vector2(0.05, 0.05)
 texture = ExtResource("2_yd4nj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(0.2, 0.2)
 shape = SubResource("CircleShape2D_m30dq")
 
 [node name="PlayerCam" type="Camera2D" parent="."]

@@ -25,7 +25,7 @@ func _on_gravity_field_grav_change(input):
 				direction = Vector2(0, -1)
 			"down": 
 				direction = Vector2(0, 1)
-		grav_switches -= 1
+		#grav_switches -= 1
 		$GravSwitchCounter.text = switch_label % grav_switches
 	
 	$"Gravity Field".gravity_direction = direction
